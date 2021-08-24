@@ -51,7 +51,7 @@ If you are using Yolo weights and config, the object detection will trigger the 
     **Contact:** martuscellifaria@gmail.com
 
 ## Special thanks to
-* **Github C++ community for providing a way of performing get and post requests so easily in C++.
+* Github C++ community for providing a way of performing get and post requests so easily in C++.
 
 * **Tom Ha** (https://github.com/tomha85) for providing such great lecture on how to read properly Yolo Darknet in C++ OpenCV.
 
