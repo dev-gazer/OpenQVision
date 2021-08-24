@@ -39,3 +39,11 @@ INCLUDEPATH += /usr/local/include/opencv4/
 LIBS += -L/usr/local/lib -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_imgcodecs -lopencv_videoio -lopencv_dnn -lcurl
 
 RESOURCES += qdarkstyle/dark/style.qrc
+
+DISTFILES += \
+    Resources/classes.txt \
+    Resources/temp/mustang.png \
+    Resources/temp/stratocaster.png \
+    Resources/yolov4-custom.cfg \
+    Resources/yolov4-custom_best.weights \
+    LICENSE

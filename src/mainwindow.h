@@ -28,6 +28,10 @@ private slots:
     void on_browseWeightsButton_clicked();
 
     void on_browseClassesButton_clicked();
+    void on_actionAbout_OpenQVision_triggered();
+
+    void on_actionLicense_triggered();
+
 private:
     VideoCaptured *mOpencv_VideoCapture;
     Ui::MainWindow *ui;

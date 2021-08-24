@@ -181,12 +181,30 @@
     </property>
     <addaction name="actionClose"/>
    </widget>
+   <widget class="QMenu" name="menuAbout">
+    <property name="title">
+     <string>About</string>
+    </property>
+    <addaction name="actionAbout_OpenQVision"/>
+    <addaction name="actionLicense"/>
+   </widget>
    <addaction name="menuClose"/>
+   <addaction name="menuAbout"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="actionClose">
    <property name="text">
     <string>Close</string>
+   </property>
+  </action>
+  <action name="actionAbout_OpenQVision">
+   <property name="text">
+    <string>About OpenQVision</string>
+   </property>
+  </action>
+  <action name="actionLicense">
+   <property name="text">
+    <string>License</string>
    </property>
   </action>
  </widget>
