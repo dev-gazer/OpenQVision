@@ -2,3 +2,5 @@
 *~
 Resources
 *.user
+*.cpp#
+*.swp
