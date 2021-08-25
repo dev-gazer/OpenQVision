@@ -12,13 +12,14 @@ class VideoCaptured : public QThread
 {
     Q_OBJECT
 public:
-    VideoCaptured(QObject *parent = nullptr, QString classesPath = "", QString configPath = "", QString weightsPath = "");
+    VideoCaptured(QObject *parent = nullptr, QString classesPath = "", QString configPath = "", QString weightsPath = "", QString mediaPath = "");
     QPixmap pixmap() const{
         return mPixmap;
     }
     QString classesPath;
     QString configPath;
     QString weightsPath;
+    QString mediaPath;
     void stop();
 signals:
     void newPixmapCaptured();

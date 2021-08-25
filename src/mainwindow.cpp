@@ -25,6 +25,7 @@ MainWindow::~MainWindow()
 {
     delete ui;
     mOpencv_VideoCapture->terminate();
+
 }
 
 void MainWindow::on_browseWeightsButton_clicked()
@@ -48,19 +49,43 @@ void MainWindow::on_browseClassesButton_clicked()
     ui->classesPath->setText(classesName);
 }
 
+void MainWindow::on_browseMediaButton_clicked()
+{
+    QString mediaName = QFileDialog::getOpenFileName(this, "Open a file", "directoryToOpen",
+            "Media Files (*.mp4 *.mpeg *.mpg *jpeg *.jpg *.png )");
+    ui->mediaPath->setText(mediaName);
+
+}
+
+void MainWindow::on_mediaPath_textChanged(const QString &arg1)
+{
+    if (ui->mediaPath->text() != ""){
+        ui->startCamera->setText("Read File");
+        ui->stopCamera->setText("Stop");
+    } else {
+        ui->startCamera->setText("Start Camera");
+        ui->stopCamera->setText("Stop Camera");
+    }
+}
+
 
 void MainWindow::on_startCamera_clicked()
 {
     QString classesPath = this->ui->classesPath->text();
     QString configPath = this->ui->configPath->text();
     QString weightsPath = this->ui->weightsPath->text();
-    mOpencv_VideoCapture = new VideoCaptured(this, classesPath, configPath, weightsPath);
+    QString mediaPath = this->ui->mediaPath->text();
+    mOpencv_VideoCapture = new VideoCaptured(this, classesPath, configPath, weightsPath, mediaPath);
     connect(mOpencv_VideoCapture, &VideoCaptured::newPixmapCaptured, this, [&](){
         ui->videoDisplay->setPixmap(mOpencv_VideoCapture->pixmap().scaled(640,480));
     });
     mOpencv_VideoCapture->start(QThread::HighestPriority);
+    if( mediaPath.toStdString().substr(mediaPath.toStdString().find_last_of(".") + 1) != "png" &&
+            mediaPath.toStdString().substr(mediaPath.toStdString().find_last_of(".") + 1) != "jpg" &&
+            mediaPath.toStdString().substr(mediaPath.toStdString().find_last_of(".") + 1) != "jpeg"){
     ui->startCamera->setDisabled(true);
     ui->stopCamera->setDisabled(false);
+    }
 }
 
 void MainWindow::on_stopCamera_clicked()

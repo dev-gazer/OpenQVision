@@ -38,7 +38,7 @@ void sendTelegramPhoto(string chat_id, string path_to_photo, string caption = NU
     CURLcode response;
     curl_global_init(CURL_GLOBAL_ALL);
     curl = curl_easy_init();
-    string url = "https://api.telegram.org/bot<YOUR-BOT-TOKEN-HERE>/sendPhoto";
+    string url = "https://api.telegram.org/<YOUR-BOT-TOKEN-HERE>/sendPhoto";
     if (curl)
     {
         curl_easy_setopt(curl, CURLOPT_VERBOSE, 1L);
