@@ -1,4 +1,4 @@
-# OpenQVision - v.1.0.0
+# OpenQVision - v.1.1.0
 
 OpenQVision is a computer vision project that allows developers and/or data scientists to rapidly test their newborn neural networks on camera streaming. As the name itself refers to, it is based on OpenCV (https://github.com/opencv/opencv) and Qt framework (https://github.com/qt) and handles Tensorflow (https://github.com/tensorflow/tensorflow) and Yolo Neural Networks (https://github.com/pjreddie/darknet).
 
