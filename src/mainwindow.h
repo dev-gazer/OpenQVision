@@ -32,6 +32,10 @@ private slots:
 
     void on_actionLicense_triggered();
 
+    void on_browseMediaButton_clicked();
+
+    void on_mediaPath_textChanged(const QString &arg1);
+
 private:
     VideoCaptured *mOpencv_VideoCapture;
     Ui::MainWindow *ui;

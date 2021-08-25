@@ -23,15 +23,24 @@
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout_4">
-      <item row="6" column="2">
-       <widget class="QLineEdit" name="configPath"/>
-      </item>
-      <item row="4" column="4">
-       <widget class="QPushButton" name="browseWeightsButton">
+      <item row="6" column="1">
+       <widget class="QLabel" name="configFileLabel">
         <property name="text">
-         <string>Browse</string>
+         <string>Config File: </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
         </property>
        </widget>
+      </item>
+      <item row="1" column="3">
+       <layout class="QHBoxLayout" name="horizontalLayout_3"/>
+      </item>
+      <item row="7" column="2">
+       <widget class="QLineEdit" name="classesPath"/>
+      </item>
+      <item row="6" column="2">
+       <widget class="QLineEdit" name="configPath"/>
       </item>
       <item row="4" column="0">
        <spacer name="horizontalSpacer">
@@ -51,30 +60,55 @@
       </item>
       <item row="4" column="6">
        <widget class="QPushButton" name="stopCamera">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="text">
          <string>Stop Camera</string>
         </property>
        </widget>
       </item>
-      <item row="7" column="1">
-       <widget class="QLabel" name="classesFileLabel">
+      <item row="3" column="4">
+       <widget class="QPushButton" name="browseMediaButton">
         <property name="text">
-         <string>Class Names</string>
+         <string>Browse</string>
         </property>
        </widget>
       </item>
-      <item row="7" column="2">
-       <widget class="QLineEdit" name="classesPath"/>
+      <item row="8" column="2">
+       <spacer name="verticalSpacer_6">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Preferred</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>10</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="4" column="4">
+       <widget class="QPushButton" name="browseWeightsButton">
+        <property name="text">
+         <string>Browse</string>
+        </property>
+       </widget>
       </item>
       <item row="4" column="2">
        <widget class="QLineEdit" name="weightsPath"/>
-      </item>
-      <item row="4" column="1">
-       <widget class="QLabel" name="weightsFileLabel">
-        <property name="text">
-         <string>Weights File</string>
-        </property>
-       </widget>
       </item>
       <item row="0" column="6">
        <spacer name="verticalSpacer_5">
@@ -89,13 +123,10 @@
         </property>
        </spacer>
       </item>
-      <item row="1" column="3">
-       <layout class="QHBoxLayout" name="horizontalLayout_3"/>
-      </item>
-      <item row="7" column="4">
-       <widget class="QPushButton" name="browseClassesButton">
+      <item row="0" column="2" alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="videoDisplay">
         <property name="text">
-         <string>Browse</string>
+         <string/>
         </property>
        </widget>
       </item>
@@ -106,8 +137,64 @@
         </property>
        </widget>
       </item>
-      <item row="2" column="6">
+      <item row="3" column="1">
+       <widget class="QLabel" name="mediaFileLabel">
+        <property name="text">
+         <string>Media File: </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="weightsFileLabel">
+        <property name="text">
+         <string>Weights File: </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="4">
+       <widget class="QPushButton" name="browseClassesButton">
+        <property name="text">
+         <string>Browse</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="2">
+       <widget class="QLineEdit" name="mediaPath">
+        <property name="placeholderText">
+         <string>Leave blank for real-time camera streaming</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="1">
+       <widget class="QLabel" name="classesFileLabel">
+        <property name="text">
+         <string>Class Names: </string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="6">
        <widget class="QPushButton" name="startCamera">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>100</width>
+          <height>0</height>
+         </size>
+        </property>
         <property name="text">
          <string>Start Camera</string>
         </property>
@@ -132,35 +219,21 @@
         </property>
        </spacer>
       </item>
-      <item row="6" column="1">
-       <widget class="QLabel" name="configFileLabel">
-        <property name="text">
-         <string>Config File</string>
-        </property>
-       </widget>
-      </item>
-      <item row="8" column="2">
-       <spacer name="verticalSpacer_6">
+      <item row="3" column="7">
+       <spacer name="horizontalSpacer_2">
         <property name="orientation">
-         <enum>Qt::Vertical</enum>
+         <enum>Qt::Horizontal</enum>
         </property>
         <property name="sizeType">
-         <enum>QSizePolicy::Preferred</enum>
+         <enum>QSizePolicy::Fixed</enum>
         </property>
         <property name="sizeHint" stdset="0">
          <size>
           <width>20</width>
-          <height>10</height>
+          <height>20</height>
          </size>
         </property>
        </spacer>
-      </item>
-      <item row="0" column="2">
-       <widget class="QLabel" name="videoDisplay">
-        <property name="text">
-         <string/>
-        </property>
-       </widget>
       </item>
      </layout>
     </item>
