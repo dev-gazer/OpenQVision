@@ -103,13 +103,14 @@ void MainWindow::on_actionAbout_OpenQVision_triggered()
     msgBox.setIcon(QMessageBox::Information);
     msgBox.setText("OpenQVision is a computer vision project that allows developers "
                    "and/or data scientists to rapidly test their newborn neural networks "
-                   "on camera streaming. As the name itself refers to, "
+                   "on camera streaming, video or photos. As the name itself refers to, "
                    "it is based on OpenCV (https://github.com/opencv/opencv) and Qt "
                    "framework (https://github.com/qt) and handles Tensorflow "
                    "(https://github.com/tensorflow/tensorflow) and Yolo Neural Networks "
                    "(https://github.com/pjreddie/darknet). "
                    "Version 1.0.0 idealized and developed by Alexandre Martuscelli Faria. "
-                   "Credits to Tom Ha (https://github.com/tomha85), Nico Nielsen (https://github.com/niconielsen32) "
+                   "Credits to Tom Ha (https://github.com/tomha85), Nico Nielsen (https://github.com/niconielsen32), "
+                   "Audrey Siqueira (https://github.com/audrey-siqueira) "
                    "and C++ community on GitHub.");
     msgBox.setStandardButtons(QMessageBox::Ok);
     msgBox.setDefaultButton(QMessageBox::Ok);
