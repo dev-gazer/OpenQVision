@@ -28,7 +28,7 @@ $ qtcreator .
 
 After building and running OpenQVision for the first time, you should see the following window:
 
-![alt text](https://github.com/dev-gazer/OpenQVision/blob/main/OpenQVision-MainWindow.png)
+![alt text](https://github.com/dev-gazer/OpenQVision/blob/1.1.0/OpenQVision-MainWindow.png)
 
 For a quick sanity check, click on Start Camera. If it opens, it is all set.
 
