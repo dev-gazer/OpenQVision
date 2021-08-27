@@ -1,4 +1,4 @@
-# OpenQVision - v1.1.0
+# OpenQVision - v1.1.1
 
 OpenQVision is a computer vision project that allows developers and/or data scientists to rapidly test their newborn neural networks on camera streaming, video or photos. As the name itself refers to, it is based on OpenCV (https://github.com/opencv/opencv) and Qt framework (https://github.com/qt) and handles Tensorflow (https://github.com/tensorflow/tensorflow) and Yolo Neural Networks (https://github.com/pjreddie/darknet).
 
@@ -24,11 +24,13 @@ $ qtcreator .
 
 #### Build and run the project using qmake.
 
+#### Or best, run the distribution executable `OpenQVision-v1.1.1.AppImage`.
+
 ## How to use it
 
 After building and running OpenQVision for the first time, you should see the following window:
 
-![alt text](https://github.com/dev-gazer/OpenQVision/blob/1.1.0/OpenQVision-MainWindow.png)
+![alt text](https://github.com/dev-gazer/OpenQVision/blob/1.1.1/OpenQVision-MainWindow.png)
 
 For a quick sanity check, click on Start Camera. If it opens, it is all set.
 
@@ -40,7 +42,7 @@ Afterwards, browse your neural network files path (weights, config and classes) 
 
 Feel free to use OpenQVision with your own modules. This version conditions the object detection to trigger a Telegram Bot. If you want to use it, go to OpenQVision/src/curl_telegram.cpp and to OpenQVision/src/videocaptured.cpp and set your own Bot Token and Telegram User Id. Any problems with creating a Telegram Bot, please refer to official documentation at https://core.telegram.org/bots/api.
 
-If you are using Yolo weights and config, the object detection will trigger the chatbot after counting a certain amount of frames with an object from your model classes. The last frame is captured in results directory and sent with the caption "We found your <name-of-the-object>!". Something like follows:
+If you are using Yolo weights and config and insert a Telegram Bot Token and a Telegram User Id, the object detection will trigger the chatbot after counting five frames with an object from your model classes. The fifth frame is captured in results directory and sent with the caption "We found your <name-of-the-object>!". Something like follows:
 
 ![alt text](https://github.com/dev-gazer/OpenQVision/blob/main/telegram-bot-example.png)
 
