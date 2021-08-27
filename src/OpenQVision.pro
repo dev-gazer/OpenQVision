@@ -16,16 +16,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    curl_telegram.cpp \
+    Telegram/curl_telegram.cpp \
     main.cpp \
-    mainwindow.cpp \
-    videocaptured.cpp
+    MainWindow/mainwindow.cpp \
+    ObjectDetection/videocaptured.cpp
 
 HEADERS += \
-    curl_telegram.h \
-    dataStructures.h \
-    mainwindow.h \
-    videocaptured.h
+    Telegram/curl_telegram.h \
+    ObjectDetection/dataStructures.h \
+    MainWindow/mainwindow.h \
+    ObjectDetection/videocaptured.h
 
 FORMS += \
     mainwindow.ui
@@ -36,6 +36,8 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 INCLUDEPATH += /usr/local/include/opencv4/
+#INCLUDEPATH += $$PWD/include/opencv4/
+#LIBS += -L$PWD/libs/ -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_imgcodecs -lopencv_videoio -lopencv_dnn -lcurl
 LIBS += -L/usr/local/lib -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_objdetect -lopencv_imgcodecs -lopencv_videoio -lopencv_dnn -lcurl
 
 RESOURCES += qdarkstyle/dark/style.qrc

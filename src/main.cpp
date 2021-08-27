@@ -1,6 +1,5 @@
-#include "mainwindow.h"
+#include "MainWindow/mainwindow.h"
 #include <QApplication>
-#include <curl_telegram.h>
 #include <QTextStream>
 #include <QFile>
 #include <QDataStream>
